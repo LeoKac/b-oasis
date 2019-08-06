@@ -13,7 +13,7 @@ middlewareObj.checkCampgroundOwnership = (req, res, next) => {
                 res.redirect("back");
             } else {
                 if (foundCampground.author.id == undefined) {
-                    if (req.user._id == "5d468f4d98872920a8c0c826") {
+                    if (req.user.username == "leodevbro") {
                         return next();
                     } else {
                         res.redirect("back");
@@ -43,7 +43,7 @@ middlewareObj.checkCommentOwnership = (req, res, next) => {
                 return
             } else {
                 if (foundComment.author.id == undefined) {
-                    if (req.user._id == "5d468f4d98872920a8c0c826") {
+                    if (req.user.username == "leodevbro") {
                         return next();
                     } else {
                         req.flash("error", "You are not the owner of this comment");
