@@ -30,7 +30,34 @@ let indexRoutes = require("./routes/index.js");
 
 
 
-mongoose.connect('mongodb://localhost:27017/yelp_camp_v11', {useNewUrlParser: true});
+mongoose.connect('mongodb+srv://dbLeodevbro:gurji@gettingstarted-fjyxk.mongodb.net/test?retryWrites=true&w=majority', {
+    useNewUrlParser: true,
+    useCreateIndex: true
+}).then(() => {
+    console.log("connected to db");
+}).catch(err => {
+    console.log("error: ", err.message);
+});
+
+
+// const MongoClient = require('mongodb').MongoClient;
+// const uri = "mongodb+srv://dbLeodevbro:gurji@gettingstarted-fjyxk.mongodb.net/test?retryWrites=true&w=majority";
+// const client = new MongoClient(uri, { useNewUrlParser: true });
+// client.connect(err => {
+//     if (err) {
+//         console.log(err.message);
+//     }
+    
+// //   const collection = client.db("test").collection("devices");
+//   // perform actions on the collection object
+//   client.close();
+// });
+
+
+
+
+
+
 
 
 app.use(flash());
