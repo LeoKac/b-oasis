@@ -1,0 +1,13 @@
+<% include ./partials/header.ejs %>
+
+<h1>Sign Up Bro</h1>
+
+
+<form action="/register" method="POST">
+    <input required type="text" name="username" placeholder="username">
+    <input required type="email" name="email" placeholder="email">
+    <input required type="password" name="password" placeholder="password">
+    <button type="submit">Sibmit</button>
+</form>
+
+<% include ./partials/footer.ejs %>

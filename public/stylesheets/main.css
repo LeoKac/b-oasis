@@ -1,0 +1,21 @@
+
+body {
+    background-color: #D1D1D1;
+}
+
+.aaa {
+    padding: 12px;
+}
+
+.bbb {
+    padding: 12px;
+}
+
+.ccc {
+    margin: 15px 0 15px 0;
+}
+
+
+.delete-form {
+    display: inline;
+}
