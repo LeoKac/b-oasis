@@ -29,8 +29,12 @@ let campgroundRoutes = require("./routes/campgrounds.js");
 let indexRoutes = require("./routes/index.js");
 
 
+// console.log("dbURL = " + process.env.DATABASEURL);
 
-mongoose.connect('mongodb+srv://dbLeodevbro:gurji@gettingstarted-fjyxk.mongodb.net/test?retryWrites=true&w=majority', {
+
+let url = process.env.DATABASEURL || "mongodb://localhost:27017/yelp_camp_v11";
+
+mongoose.connect(url, {
     useNewUrlParser: true,
     useCreateIndex: true
 }).then(() => {
@@ -40,19 +44,9 @@ mongoose.connect('mongodb+srv://dbLeodevbro:gurji@gettingstarted-fjyxk.mongodb.n
 });
 
 
-// const MongoClient = require('mongodb').MongoClient;
-// const uri = "mongodb+srv://dbLeodevbro:gurji@gettingstarted-fjyxk.mongodb.net/test?retryWrites=true&w=majority";
-// const client = new MongoClient(uri, { useNewUrlParser: true });
-// client.connect(err => {
-//     if (err) {
-//         console.log(err.message);
-//     }
-    
-// //   const collection = client.db("test").collection("devices");
-//   // perform actions on the collection object
-//   client.close();
-// });
 
+// 'mongodb://localhost:27017/yelp_camp_v11'
+// 'mongodb+srv://dbLeodevbro:gurji@gettingstarted-fjyxk.mongodb.net/test?retryWrites=true&w=majority'
 
 
 
