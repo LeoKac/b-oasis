@@ -21,3 +21,10 @@
 <br />
 
 ![Alt Text](https://i.ibb.co/NnvZtRk/height-width-apng.png)
+
+<p align="center">
+  <img 
+    src="https://i.ibb.co/NnvZtRk/height-width-apng.png"
+    alt="Remotes view"
+  />
+</p>
